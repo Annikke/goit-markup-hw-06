@@ -405,7 +405,7 @@ body {
 .footer-container {
     display: flex;
     align-items: baseline;
-    gap: 70px;
+    justify-content: space-between;
 }
 
 .footer .logo-part {
@@ -576,7 +576,7 @@ address {
 }
 
 .form-title {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
@@ -585,7 +585,7 @@ address {
 }
 
 .form-label {
-    padding-bottom: 4px;
+    margin-bottom: 4px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -604,10 +604,11 @@ address {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline-color: transparent;
+    transition: border var(--transition-duration) var(--transition-timing-function);
 }
 
 .form-input:focus {
-    border-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .form-input:focus + .form-icon {
@@ -619,6 +620,7 @@ address {
     top: 11px;
     left: 12px;
     fill: var(--tittle-text-color);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
 .form-textarea {
@@ -630,10 +632,11 @@ address {
     border-radius: 4px;
     resize: none;
     outline-color: transparent;
+    transition: border var(--transition-duration) var(--transition-timing-function);
 }
 
 .form-textarea:focus {
-    border-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 .form-textarea::placeholder {
